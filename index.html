@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOC × Millennial Advocates | Creative Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hoc-yellow': '#FFD700',
+                        'hoc-blue': '#1E40AF',
+                        'hoc-light-blue': '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #1E40AF, #3B82F6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .slide-in { animation: slideIn 0.8s ease-out forwards; opacity: 0; transform: translateY(30px); }
+        @keyframes slideIn { to { opacity: 1; transform: translateY(0); } }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(30, 64, 175, 0.1); }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="min-h-screen bg-gradient-to-br from-blue-50 to-yellow-50 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 left-20 w-32 h-32 bg-hoc-yellow rounded-full opacity-20 floating"></div>
+        <div class="absolute bottom-20 right-20 w-24 h-24 bg-hoc-blue rounded-full opacity-20 floating" style="animation-delay: -3s;"></div>
+        
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="text-center">
+                <div class="slide-in stagger-1">
+                    <h1 class="text-6xl font-bold mb-4">
+                        <span class="text-hoc-blue">HIGH ON</span>
+                        <span class="text-hoc-yellow"> CONTENT</span>
+                    </h1>
+                    <div class="w-32 h-1 bg-gradient-to-r from-hoc-blue to-hoc-yellow mx-auto mb-8"></div>
+                </div>
+                
+                <div class="slide-in stagger-2">
+                    <h2 class="text-4xl font-light text-gray-700 mb-8">Creative Proposal for</h2>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+                        <h3 class="text-5xl font-bold gradient-text mb-4">Millennial Advocates</h3>
+                        <p class="text-xl text-gray-600">Research • Strategy • Branding • Website</p>
+                    </div>
+                </div>
+                
+                <div class="slide-in stagger-3 mt-12">
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Crafted exclusively for <strong>Aditi S.</strong> — A comprehensive brand transformation journey
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 slide-in stagger-4">
+                <div class="w-6 h-10 border-2 border-hoc-blue rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-hoc-blue rounded-full mt-2 animate-bounce"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Challenge Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-hoc-blue mb-4">The Challenge</h2>
+                <div class="w-20 h-1 bg-hoc-yellow mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-blue-50 to-yellow-50 rounded-3xl p-12 text-center">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+                        How do we create a distinct brand identity for Millennial Advocates that resonates deeply with the target audience and creates lasting market impact?
+                    </h3>
+                    <p class="text-lg text-gray-600">
+                        The solution lies in our comprehensive approach: strategic research, compelling positioning, and cohesive visual identity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-hoc-blue mb-4">Our Strategic Approach</h2>
+                <div class="w-20 h-1 bg-hoc-yellow mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A three-phase journey designed to transform Millennial Advocates into a market-leading brand
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Phase 1: Research -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-hoc-blue">
+                    <div class="bg-hoc-blue w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl font-bold">01</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-hoc-blue mb-4">Research Foundation</h3>
+                    <div class="text-right mb-4">
+                        <span class="bg-hoc-yellow text-hoc-blue px-4 py-2 rounded-full font-bold">40 Days | ₹80,000</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Market Research & Analysis
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Competitor Deep-Dive Analysis
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Primary Research & Surveys
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Strategic Branding Research
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2: Strategy -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-hoc-yellow">
+                    <div class="bg-hoc-yellow w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-hoc-blue text-2xl font-bold">02</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-hoc-blue mb-4">Brand Strategy</h3>
+                    <div class="text-right mb-4">
+                        <span class="bg-hoc-blue text-white px-4 py-2 rounded-full font-bold">10 Days | ₹30,000</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Brand Positioning & Statement
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Memorable Tagline Creation
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Messaging Framework
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Brand Story & Voice Guidelines
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3: Visual Identity -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-hoc-light-blue">
+                    <div class="bg-hoc-light-blue w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-white text-2xl font-bold">03</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-hoc-blue mb-4">Visual Identity</h3>
+                    <div class="text-right mb-4">
+                        <span class="bg-hoc-yellow text-hoc-blue px-4 py-2 rounded-full font-bold">10 Days | ₹55,000</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Multiple Logo Concepts
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Logo Design (₹25,000)
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            12-Page Brand Deck (₹30,000)
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-hoc-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Complete Brand Guidelines
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section class="py-20 bg-gradient-to-r from-hoc-blue to-hoc-light-blue text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Total Investment</h2>
+            <div class="bg-white bg-opacity-20 rounded-3xl p-12 max-w-2xl mx-auto backdrop-blur-sm">
+                <div class="text-6xl font-bold mb-4">₹1,65,000</div>
+                <div class="text-xl mb-4">+ GST</div>
+                <div class="text-lg opacity-90">Complete brand transformation in 60 days</div>
+            </div>
+            
+            <div class="mt-12 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="text-2xl font-bold mb-2">60 Days</div>
+                    <div class="text-sm opacity-80">Total Timeline</div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="text-2xl font-bold mb-2">3 Phases</div>
+                    <div class="text-sm opacity-80">Strategic Approach</div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="text-2xl font-bold mb-2">1 Brand</div>
+                    <div class="text-sm opacity-80">Transformed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why HOC Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-hoc-blue mb-4">Why High On Content?</h2>
+                <div class="w-20 h-1 bg-hoc-yellow mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-hoc-blue mb-6">We don't just create brands.</h3>
+                    <h3 class="text-3xl font-bold gradient-text mb-8">We create movements.</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-hoc-yellow rounded-full flex-shrink-0 mt-1 mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-hoc-blue mb-2">Research-Driven Approach</h4>
+                                <p class="text-gray-600">Every decision backed by comprehensive market insights and consumer behavior analysis.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-hoc-blue rounded-full flex-shrink-0 mt-1 mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-hoc-blue mb-2">Strategic Positioning</h4>
+                                <p class="text-gray-600">We identify your unique space in the market and help you own it completely.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-hoc-light-blue rounded-full flex-shrink-0 mt-1 mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-hoc-blue mb-2">Cohesive Brand Experience</h4>
+                                <p class="text-gray-600">From strategy to visual identity, every touchpoint tells your story consistently.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-3xl p-12 text-center">
+                    <div class="text-6xl mb-6">🚀</div>
+                    <h4 class="text-2xl font-bold text-hoc-blue mb-4">Ready to Transform?</h4>
+                    <p class="text-gray-600 mb-8">Let's build Millennial Advocates into the brand it's destined to become.</p>
+                    <button class="bg-gradient-to-r from-hoc-blue to-hoc-light-blue text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-shadow duration-300">
+                        Let's Start This Journey
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-hoc-blue text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-4">HIGH ON CONTENT</h3>
+            <p class="text-blue-200 mb-6">Where strategy meets creativity</p>
+            <div class="w-20 h-1 bg-hoc-yellow mx-auto mb-6"></div>
+            <p class="text-blue-200 text-sm">Proposal Date: 01/06/2025 • Crafted for Millennial Advocates</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling and intersection observer for animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements that should animate
+            document.querySelectorAll('.card-hover, h2, h3').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Smooth scrolling for the scroll indicator
+            document.querySelector('.animate-bounce').parentElement.addEventListener('click', function() {
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
